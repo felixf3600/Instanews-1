@@ -10,7 +10,7 @@ ehthumbs.db
 
 # Editor
 .vscode
-
+assets/
 # Node
 node_modules/
 npm-debug.log

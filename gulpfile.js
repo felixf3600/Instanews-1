@@ -24,7 +24,7 @@ var browserSync = require("browser-sync").create();
 gulp.task("watch", function () {
     gulp.watch("./js/*.js", gulp.series("scripts", "reload"));
     gulp.watch("./*.html", gulp.series("reload"));
-    gulp.watch("./css./*.css", gulp.series("reload"));
+    gulp.watch("./css/*.css", gulp.series("reload"));
 });
 
 gulp.task("browser-sync", function () {
@@ -39,4 +39,4 @@ gulp.task("reload", function (done) {
     browserSync.reload();
     done();
 });
-gulp.task("default", gulp.parallel("scripts", "watch", "browser - sync"));
+gulp.task("default", gulp.parallel("scripts", "watch", "browser-sync"));

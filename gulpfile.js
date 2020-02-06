@@ -1,8 +1,12 @@
 const gulp = require("gulp"); // Load Gulp!
-// Now that we've installed the terser package we can require it:
 const terser = require("gulp-terser"),
-    rename = require("gulp-rename");
-const eslint = require('gulp-eslint');
+    rename = require("gulp-rename"),
+    eslint = require('gulp-eslint'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
+    prettyerror = require('gulp-prettyerror');
+const browserSync = require("browser-sync").create();
 gulp.task("scripts", function () {
     return gulp
         .src("./js/*.js") // What files do we want gulp to consume?
@@ -19,12 +23,22 @@ gulp.task("lint", function () {
         .pipe(eslint.failAfterError())
 });
 
-var browserSync = require("browser-sync").create();
+gulp.task('sass', function () {
+    return gulp
+        .src('./sass/style.scss')
+        .pipe(prettyerror())
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(cssnano())
+        .pipe(rename('style.min.css'))
+        .pipe(gulp.dest('./build/css'));
+});
+
 
 gulp.task("watch", function () {
     gulp.watch("./js/*.js", gulp.series("scripts", "reload"));
     gulp.watch("./*.html", gulp.series("reload"));
-    gulp.watch("./css/*.css", gulp.series("reload"));
+    gulp.watch("./sass/*.scss", gulp.series("reload"));
 });
 
 gulp.task("browser-sync", function () {
@@ -39,4 +53,4 @@ gulp.task("reload", function (done) {
     browserSync.reload();
     done();
 });
-gulp.task("default", gulp.parallel("scripts", "watch", "browser-sync"));
+gulp.task("default", gulp.parallel("scripts", "watch", "browser-sync", "sass"));

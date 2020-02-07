@@ -47,9 +47,6 @@ select {
     width: 100%;
     background-position: 50%;
     background-size: cover;
-    display: flex;
-    justify-content: end;
-    flex-direction: column-reverse;
     &:first-child {
       margin-top: 2rem;
     }
@@ -61,7 +58,7 @@ select {
       }
     }
     @include desktop() {
-      flex: 0 1 25%;
+      sflex: 0 1 25%;
       max-width: 25%;
       &:nth-child(-n + 4) {
         margin-top: 2rem;
@@ -77,6 +74,17 @@ select {
       background: rgba(0, 0, 0, 0.6);
       flex: 0 1;
       padding: 0.5rem;
+    }
+
+    a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      flex-direction: column-reverse;
+
+      color: inherit; /* blue colors for links too */
+      text-decoration: inherit; /* no underline */
     }
   }
 }

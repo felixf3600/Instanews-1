@@ -12,13 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.article-flex').empty();
                 for (let i = 0; i < 12 && i < data.results.length; i++) {
                     let newArticle = document.createElement("article");
+                    let newDiv = document.createElement("div");
                     let newDescription = document.createElement("p");
+                    let newLink = document.createElement("a");
                     newArticle.style = `background-image: url(${data.results[i].multimedia[3].url})`
                     newDescription.innerText = `${data.results[i].abstract}`
-                    newArticle.append(newDescription);
-                    console.log(data.results.length);
+                    newLink.setAttribute("href", `${data.results[i].short_url}`)
+                    newArticle.append(newLink);
+                    newLink.append(newDescription);
                     articleFlex[0].appendChild(newArticle);
-
                 }
 
 

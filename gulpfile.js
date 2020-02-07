@@ -38,7 +38,7 @@ gulp.task('sass', function () {
 gulp.task("watch", function () {
     gulp.watch("./js/*.js", gulp.series("scripts", "reload"));
     gulp.watch("./*.html", gulp.series("reload"));
-    gulp.watch("./sass/*.scss", gulp.series("reload"));
+    gulp.watch("./sass/*.scss", gulp.series("sass", "reload"));
 });
 
 gulp.task("browser-sync", function () {
@@ -53,4 +53,4 @@ gulp.task("reload", function (done) {
     browserSync.reload();
     done();
 });
-gulp.task("default", gulp.parallel("scripts", "watch", "browser-sync", "sass"));
+gulp.task("default", gulp.parallel("scripts", "sass", "watch", "browser-sync"));

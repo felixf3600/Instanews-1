@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const selector = document.querySelector('select');
     let articleFlex = document.getElementsByClassName("article-flex");
+    let header = document.querySelector('header');
 
     selector.addEventListener('change', () => {
 
@@ -12,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.article-flex').empty();
                 for (let i = 0; i < 12 && i < data.results.length; i++) {
                     let newArticle = document.createElement("article");
-                    let newDiv = document.createElement("div");
                     let newDescription = document.createElement("p");
                     let newLink = document.createElement("a");
                     newArticle.style = `background-image: url(${data.results[i].multimedia[3].url})`
@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             })
+            .always(function () {
+                header.style = "height: auto;"
+
+            })
+
+
+
     });
 
 

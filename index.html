@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="./build/css/style.min.css" />
   </head>
   <body>
-    <header>
-      <?xml version="1.0" encoding="utf-8"?>
-      <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-      <div id="svg-container">
-        <img src="./assets/images/nyt-logo.svg" />
-      </div>
-    </header>
-    <p id="test">Choose a section:</p>
-    <div id="section-container">
-      <select name="sections" id="sections">
-        <option value="">Sections ...</option>
-        <option value="home">Home</option>
-        <option value="arts">Arts</option>
-        <option value="business">Business</option>
-        <option value="sports">Sports</option>
-        <option value="technology">Technology</option>
-        <option value="fashion">Fashion</option>
-      </select>
+    <div class="body-container">
+      <header>
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <div id="svg-container">
+          <img src="./assets/images/nyt-logo.svg" />
+        </div>
+        <div id="section-container">
+          <p>Choose a section:</p>
+          <select name="sections" id="sections">
+            <option value="">Sections ...</option>
+            <option value="home">Home</option>
+            <option value="arts">Arts</option>
+            <option value="business">Business</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+          </select>
+        </div>
+        <div id="container">
+          <div class="article-flex"></div>
+        </div>
+      </header>
+
+      <footer>
+        <p>© Copyright 2019 <span>Instanews</span></p>
+      </footer>
     </div>
-    <div id="container">
-      <div class="article-flex"></div>
-    </div>
-    <footer>
-      <p>© Copyright 2019 <span>Instanews</span></p>
-    </footer>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let articleFlex = document.getElementsByClassName("article-flex");
     let header = document.querySelector('header');
     let image = document.querySelector('img');
-    let articleNoImgCounter = 0
+    let articleNoImgCounter = 0;
 
     selector.addEventListener('change', () => {
 
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .done(function (data) {
                 $('.article-flex').empty();
                 for (let i = 0; i < 12 && i < data.results.length; i++) {
-                    while (data.results[i].multimedia === undefined) {
-                        articleNoImgCounter++
+                    while (data.results[i + articleNoImgCounter].multimedia[3] === undefined) {
+                        articleNoImgCounter++;
                     }
                     let newArticle = document.createElement("article");
                     let newDescription = document.createElement("p");
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .always(function () {
                 header.classList.add("clicked");
-                image.classList.add("clicked");
+                image.classList.add("img-clicked");
 
             })
 

@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  @include tablet() {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+#svg-container {
+  img {
+  }
+  @include tablet() {
+    align-self: center;
+  }
+}
+#section-container {
+  @include tablet() {
+    align-self: center;
+  }
+  select {
+    padding: 0.25rem 1rem 0.25rem 0;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}

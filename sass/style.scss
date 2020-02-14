@@ -1,9 +1,12 @@
 @import "normalize";
 @import "globals";
+@import "header";
+@import "onclicked";
+
 body,
 html {
   font-size: 16px;
-  color: #ffffff;
+  color: $main-color;
   background-color: black;
   text-align: center;
 }
@@ -11,35 +14,16 @@ span {
   text-transform: uppercase;
 }
 
-#svg-container {
-  img {
-  }
-  @include tablet() {
-    align-self: center;
-  }
-}
-#section-container {
-  @include tablet() {
-    align-self: center;
-  }
-}
-select {
-  padding: 0.25rem 1rem 0.25rem 0;
-  text-align: left;
-  margin-top: 0.5rem;
-}
-header {
+.body-container {
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
-  height: 90vh;
   flex-direction: column;
-  justify-content: center;
-  transition: all 2s ease-in-out 1.5s;
-  @include tablet() {
-    flex-direction: row;
-    justify-content: center;
-  }
+  height: 100vh;
+  justify-content: space-between;
 }
 
+// Articles
 #container {
   width: 100%;
 
@@ -86,54 +70,19 @@ header {
       display: flex;
       justify-content: end;
       flex-direction: column-reverse;
-
-      color: inherit; /* blue colors for links too */
-      text-decoration: inherit; /* no underline */
+      color: inherit;
+      text-decoration: inherit;
     }
   }
-}
-
-.body-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
+  .loading-gif {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+  }
 }
 
 footer {
-  color: #c2c2c2;
-}
-
-.clicked {
-  @include tablet() {
-    align-items: flex-start;
-    flex: 1 0 auto;
-    height: 100px;
-    max-width: 600px;
-    justify-content: flex-start;
-  }
-}
-
-.img-clicked {
-  height: 150px;
-  width: 150px;
-  padding-top: 1rem;
-  @include tablet() {
-    height: 65px;
-    width: 65px;
-    padding: 0.5rem 5rem 0 5rem;
-  }
-}
-
-.body-container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.loading-gif {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  height: 50px;
-  width: 50px;
+  color: $footer-color;
 }

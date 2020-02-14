@@ -1,0 +1,20 @@
+.clicked {
+  @include tablet() {
+    align-items: flex-start;
+    flex: 1 0 auto;
+    height: 100px;
+    max-width: 600px;
+    justify-content: flex-start;
+  }
+}
+
+.img-clicked {
+  height: 150px;
+  width: 150px;
+  padding-top: 1rem;
+  @include tablet() {
+    height: 65px;
+    width: 65px;
+    padding: 0.5rem 5rem 0 5rem;
+  }
+}

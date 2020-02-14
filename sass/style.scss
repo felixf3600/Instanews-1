@@ -42,10 +42,12 @@ span {
     background-size: cover;
     transition: font-size 0.25s ease-in-out;
     &:hover {
-      font-size: 1.2rem;
       h2 {
         opacity: 1;
         font-size: 1.35rem;
+      }
+      p {
+        font-size: 1.2rem;
       }
     }
     &:first-child {

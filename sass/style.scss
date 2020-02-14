@@ -43,10 +43,15 @@ span {
     transition: font-size 0.25s ease-in-out;
     &:hover {
       font-size: 1.25rem;
+      h2 {
+        opacity: 1;
+        font-size: 2rem;
+      }
     }
     &:first-child {
       margin-top: 2rem;
     }
+
     @include tablet() {
       flex: 0 1 50%;
       max-width: 50%;
@@ -71,7 +76,8 @@ span {
     p {
       margin: 0;
       background: rgba(0, 0, 0, 0.6);
-      flex: 0 1;
+      // flex: 0 1;
+      // order: 2;
       padding: 0.5rem;
     }
 
@@ -84,7 +90,17 @@ span {
       color: inherit;
       text-decoration: inherit;
     }
+    h2 {
+      margin: 0px;
+      padding-bottom: 0.25rem;
+      order: 1;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 0.25rem;
+      opacity: 0;
+      transition: font-size 0.25s ease-in-out;
+    }
   }
+
   .loading-gif {
     position: absolute;
     bottom: 50%;

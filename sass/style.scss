@@ -40,6 +40,10 @@ span {
     width: 100%;
     background-position: 50%;
     background-size: cover;
+    transition: font-size 0.25s ease-in-out;
+    &:hover {
+      font-size: 1.25rem;
+    }
     &:first-child {
       margin-top: 2rem;
     }

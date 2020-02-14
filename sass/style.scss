@@ -15,7 +15,7 @@ span {
 }
 
 .body-container {
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -48,12 +48,18 @@ span {
       &:nth-child(2) {
         margin-top: 2rem;
       }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 2rem;
+      }
     }
     @include desktop() {
       sflex: 0 1 25%;
       max-width: 25%;
       &:nth-child(-n + 4) {
         margin-top: 2rem;
+      }
+      &:nth-last-child(-n + 4) {
+        margin-bottom: 2rem;
       }
     }
 
@@ -85,4 +91,8 @@ span {
 
 footer {
   color: $footer-color;
+  margin-bottom: 3rem;
+  @include desktop() {
+    text-align: left;
+  }
 }

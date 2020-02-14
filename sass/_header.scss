@@ -7,10 +7,13 @@ header {
     flex-direction: row;
     justify-content: center;
   }
-}
-#svg-container {
-  img {
+  @include tablet() {
+    flex-direction: row;
+    justify-content: flex-start;
   }
+}
+.svg-container {
+  margin: 0 4rem;
   @include tablet() {
     align-self: center;
   }

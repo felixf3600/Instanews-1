@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let articleFlex = document.getElementsByClassName("article-flex");
     let header = document.querySelector('header');
     let image = document.querySelector('img');
+    let svgContainer = document.getElementsByClassName("svg-container");
     let articleNoImgCounter = 0;
     const loadingGif = document.createElement('img');
     loadingGif.src = "../assets/images/ajax-loader.gif";
@@ -35,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .always(function () {
                     header.classList.add("clicked");
                     image.classList.add("img-clicked");
-
-
+                    svgContainer[0].classList.add("svg-container-clicked");
                 })
         }
     });

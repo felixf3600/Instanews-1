@@ -2,7 +2,8 @@
   @include tablet() {
     align-items: flex-start;
     flex: 1 0 auto;
-    height: 100px;
+    height: auto;
+    margin-top: 1rem;
     max-width: 600px;
     justify-content: flex-start;
   }
@@ -17,4 +18,9 @@
     width: 65px;
     padding: 0.5rem 5rem 0 5rem;
   }
+}
+
+.svg-container-clicked {
+  margin: 0 0;
+  color: red;
 }

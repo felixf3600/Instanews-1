@@ -26,13 +26,14 @@ span {
 select {
   padding: 0.25rem 1rem 0.25rem 0;
   text-align: left;
+  margin-top: 0.5rem;
 }
 header {
   display: flex;
   height: 90vh;
   flex-direction: column;
   justify-content: center;
-
+  transition: all 2s ease-in-out 1.5s;
   @include tablet() {
     flex-direction: row;
     justify-content: center;
@@ -127,4 +128,12 @@ footer {
 .body-container {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.loading-gif {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
 }

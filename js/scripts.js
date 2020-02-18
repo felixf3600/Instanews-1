@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         while (data.results[i + articleNoImgCounter].multimedia[3] === undefined) {
                             articleNoImgCounter++;
                         }
-                        console.log(data.results[i]);
                         let newArticle = document.createElement("article");
                         let newHeader = document.createElement("h2");
                         let newDescription = document.createElement("p");

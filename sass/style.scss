@@ -64,7 +64,7 @@ span {
       }
     }
     @include desktop() {
-      sflex: 0 1 25%;
+      flex: 0 1 25%;
       max-width: 25%;
       &:nth-child(-n + 4) {
         margin-top: 2rem;

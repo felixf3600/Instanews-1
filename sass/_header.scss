@@ -7,7 +7,7 @@ header {
     flex-direction: row;
     justify-content: center;
   }
-  @include tablet() {
+  @include desktop() {
     flex-direction: row;
     justify-content: flex-start;
   }
